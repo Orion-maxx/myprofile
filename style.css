@@ -1,0 +1,779 @@
+
+/* =====================================================
+   RESET & GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family:
+        'Open Sans',
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+
+    color: #272829;
+
+    background-color: #040b14;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   MOBILE TOGGLE BUTTON
+===================================================== */
+
+.mobile-nav-toggle {
+    position: fixed;
+
+    right: 15px;
+    top: 15px;
+
+    z-index: 9998;
+
+    width: 42px;
+    height: 42px;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    outline: none;
+
+    border-radius: 50%;
+
+    background-color: #149ddd;
+
+    color: #fff;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-toggle:hover {
+    background-color: #0b82bb;
+
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+#sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: clamp(240px, 20vw, 300px);
+
+    z-index: 9997;
+
+    padding: 0 15px;
+
+    background: #040b14;
+
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.profile-container {
+    text-align: center;
+
+    padding:
+        clamp(20px, 3vw, 30px)
+        0
+        20px;
+}
+
+
+/* =====================================================
+   PROFILE IMAGE
+===================================================== */
+
+.profile-img-box {
+    width: clamp(90px, 8vw, 120px);
+    height: clamp(90px, 8vw, 120px);
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    border:
+        clamp(5px, 0.5vw, 8px)
+        solid
+        #2c2f3f;
+
+    overflow: hidden;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   PROFILE NAME
+===================================================== */
+
+.profile-name {
+    margin: 0;
+    padding: 0;
+
+    font-size: clamp(18px, 1.6vw, 24px);
+
+    line-height: 1.3;
+
+    font-weight: 600;
+}
+
+.profile-name a {
+    color: #fff;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.profile-name a:hover {
+    color: #149ddd;
+}
+
+
+/* =====================================================
+   SOCIAL LINKS
+===================================================== */
+
+.social-links {
+    margin-top: 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(5px, 0.5vw, 8px);
+}
+
+.social-links a {
+    width: clamp(32px, 2.5vw, 36px);
+    height: clamp(32px, 2.5vw, 36px);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #212431;
+
+    color: #fff;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #149ddd;
+
+    color: #fff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.nav-menu {
+    padding: 15px 0;
+
+    flex-grow: 1;
+}
+
+.nav-menu ul {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    position: relative;
+
+    white-space: nowrap;
+}
+
+.nav-menu a,
+.nav-menu a:focus {
+    display: flex;
+
+    align-items: center;
+
+    color: #a8a9b4;
+
+    padding:
+        clamp(9px, 1vw, 12px)
+        clamp(10px, 1.2vw, 15px);
+
+    margin-bottom: 8px;
+
+    transition: 0.3s;
+
+    font-size: clamp(13px, 1vw, 15px);
+
+    text-decoration: none;
+
+    border-radius: 4px;
+}
+
+.nav-menu a i {
+    width: 20px;
+
+    margin-right: 12px;
+
+    color: #6f7180;
+
+    font-size: clamp(16px, 1.3vw, 18px);
+
+    text-align: center;
+}
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus {
+    color: #fff;
+}
+
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i {
+    color: #149ddd;
+}
+
+
+/* =====================================================
+   SIDEBAR FOOTER
+===================================================== */
+
+.sidebar-footer {
+    padding: 15px 0;
+
+    text-align: center;
+
+    font-size: clamp(10px, 0.8vw, 12px);
+
+    line-height: 1.5;
+
+    color: #eaebf0;
+}
+
+.sidebar-footer p {
+    margin: 2px 0;
+}
+
+.sidebar-footer a {
+    color: #149ddd;
+
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   HERO
+   BACKGROUND SAMA SEPERTI CODE PERTAMA
+===================================================== */
+
+#hero {
+    width: calc(100% - clamp(240px, 20vw, 300px));
+
+    min-height: 100vh;
+
+    margin-left: clamp(240px, 20vw, 300px);
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        clamp(30px, 5vw, 80px);
+
+    /*
+       BACKGROUND SEPERTI CODE PERTAMA
+    */
+
+    background:
+        linear-gradient(
+            rgba(5, 13, 24, 0.3),
+            rgba(5, 13, 24, 0.3)
+        ),
+        url("background.jpeg") top right no-repeat;
+
+    background-size: cover;
+
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* =====================================================
+   HERO CONTAINER
+===================================================== */
+
+.hero-container {
+    width: 100%;
+
+    max-width: 1000px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   HERO TITLE
+===================================================== */
+
+.hero-container h1 {
+    margin: 0 0 clamp(8px, 1vw, 15px);
+
+    color: #fff;
+
+    font-size: clamp(38px, 5vw, 64px);
+
+    font-weight: 700;
+
+    line-height: 1.05;
+
+    word-wrap: break-word;
+}
+
+
+/* =====================================================
+   HERO TEXT
+===================================================== */
+
+.hero-container p {
+    margin-bottom: clamp(25px, 4vw, 50px);
+
+    color: #fff;
+
+    font-size: clamp(18px, 2vw, 26px);
+
+    font-family: sans-serif;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   TYPED TEXT
+===================================================== */
+
+.typed-text {
+    color: #fff;
+
+    border-bottom: 3px solid #149ddd;
+
+    padding-bottom: 2px;
+}
+
+
+/* =====================================================
+   CURSOR
+===================================================== */
+
+.cursor {
+    display: inline-block;
+
+    background-color: #fff;
+
+    margin-left: 2px;
+
+    width: 3px;
+
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0% {
+        background-color: #fff;
+    }
+
+    49% {
+        background-color: #fff;
+    }
+
+    50% {
+        background-color: transparent;
+    }
+
+    99% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: #fff;
+    }
+}
+
+
+/* =====================================================
+   DESKTOP BESAR
+===================================================== */
+
+@media (min-width: 1600px) {
+
+    #sidebar {
+        width: 300px;
+    }
+
+    #hero {
+        width: calc(100% - 300px);
+
+        margin-left: 300px;
+
+        padding-left: 8vw;
+        padding-right: 8vw;
+
+        /*
+           Tetap seperti background awal
+        */
+
+        background-position: top right;
+        background-size: cover;
+    }
+
+}
+
+
+/* =====================================================
+   TABLET / LAPTOP
+===================================================== */
+
+@media (max-width: 1199px) {
+
+    .mobile-nav-toggle {
+        display: flex;
+    }
+
+
+    /* SIDEBAR */
+
+    #sidebar {
+        width: 280px;
+
+        left: -280px;
+    }
+
+    #sidebar.sidebar-active {
+        left: 0;
+    }
+
+
+    /* HERO */
+
+    #hero {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding:
+            clamp(30px, 6vw, 70px);
+
+        /*
+           Background tetap seperti kode pertama
+        */
+
+        background-position: top right;
+
+        background-size: cover;
+    }
+
+
+    .hero-container h1 {
+        font-size: clamp(38px, 6vw, 60px);
+    }
+
+    .hero-container p {
+        font-size: clamp(18px, 3vw, 24px);
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+    #hero {
+        width: 100%;
+
+        margin-left: 0;
+
+        min-height: 100vh;
+
+        padding:
+            80px
+            clamp(20px, 6vw, 40px)
+            40px;
+
+        /*
+           Tetap cover,
+           posisi background di kanan atas
+        */
+
+        background-position: top right;
+
+        background-size: cover;
+    }
+
+
+    .hero-container {
+        max-width: 100%;
+    }
+
+
+    .hero-container h1 {
+        font-size: clamp(32px, 9vw, 48px);
+
+        line-height: 1.1;
+    }
+
+
+    .hero-container p {
+        font-size: clamp(16px, 4.5vw, 20px);
+
+        line-height: 1.5;
+
+        margin-bottom: 30px;
+    }
+
+
+    .typed-text {
+        border-bottom-width: 2px;
+    }
+
+}
+
+
+/* =====================================================
+   HP
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .mobile-nav-toggle {
+        width: 40px;
+        height: 40px;
+
+        top: 12px;
+        right: 12px;
+
+        font-size: 18px;
+    }
+
+
+    /* SIDEBAR */
+
+    #sidebar {
+        width: min(280px, 85vw);
+
+        left: -85vw;
+
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    #sidebar.sidebar-active {
+        left: 0;
+    }
+
+
+    /* PROFILE */
+
+    .profile-container {
+        padding-top: 25px;
+    }
+
+    .profile-img-box {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-name {
+        font-size: 20px;
+    }
+
+
+    /* HERO */
+
+    #hero {
+        width: 100%;
+
+        margin-left: 0;
+
+        min-height: 100vh;
+
+        padding:
+            80px
+            20px
+            30px;
+
+        /*
+           Background tetap sama
+           seperti CSS pertama
+        */
+
+        background-position: top right;
+
+        background-size: cover;
+    }
+
+
+    .hero-container h1 {
+        font-size: clamp(30px, 10vw, 40px);
+
+        line-height: 1.1;
+    }
+
+
+    .hero-container p {
+        font-size: 17px;
+
+        line-height: 1.5;
+    }
+
+}
+
+
+/* =====================================================
+   HP SANGAT KECIL
+===================================================== */
+
+@media (max-width: 360px) {
+
+    #hero {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        background-position: top right;
+
+        background-size: cover;
+    }
+
+
+    .hero-container h1 {
+        font-size: 28px;
+    }
+
+
+    .hero-container p {
+        font-size: 15px;
+    }
+
+
+    .profile-name {
+        font-size: 18px;
+    }
+
+}
+
+
+/* =====================================================
+   HP LANDSCAPE
+===================================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    #hero {
+        min-height: 100vh;
+
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        background-position: top right;
+
+        background-size: cover;
+    }
+
+
+    .profile-container {
+        padding-top: 15px;
+    }
+
+
+    .profile-img-box {
+        width: 80px;
+        height: 80px;
+    }
+
+}
+
+
+/* =====================================================
+   SIDEBAR SCROLLBAR
+===================================================== */
+
+#sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+#sidebar::-webkit-scrollbar-track {
+    background: #040b14;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+    background: #2c2f3f;
+
+    border-radius: 10px;
+}
+
+#sidebar::-webkit-scrollbar-thumb:hover {
+    background: #149ddd;
+}
+
